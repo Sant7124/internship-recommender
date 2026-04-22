@@ -30,7 +30,7 @@ pip install -r requirements.txt
 3. Run:
 python app.py
 
-4. Open: http://127.0.0.1:5000
+4. Open: http://127.0.0.1:5000 (locally in ur system)
 
 ## Deploy (Render)
 1. Push this repo to GitHub.
