@@ -1,46 +1,28 @@
-# 🎓 Internship Recommender
+# Internship Recommender (ML System)
 
-An intelligent **Flask web app** that recommends internships based on your **skills**, **sector**, **location**, and **short bio**.  
-It uses **rule-based scoring** + **TF-IDF text similarity** to suggest the most relevant internships from a CSV dataset.
+**Machine Learning Career Recommendation Engine**
 
----
+> **Note**: This repository is a fork of `Shivam-dev30/internship-recommender` with modifications to its deployment structure and CI/CD pipelines to run on Railway and conform to standard engineering practices.
 
-## 🌐 Live Demo
-🚀 **https://internshiprecommender.up.railway.app/**  
+## 🚀 Live Demo
+- **Live Link**: [https://internshiprecommender.up.railway.app](https://internshiprecommender.up.railway.app)
 
----
+## ⚙️ Setup Instructions
 
-## Run locally
+### Environment Setup
+Create a `.env` file based on `.env.example`:
+```bash
+cp .env.example .env
+```
 
-1. Create virtual env:
-   - Linux/Mac:
-     ```
-     python3 -m venv venv
-     source venv/bin/activate
-     ```
-   - Windows (PowerShell):
-     ```
-     python -m venv venv
-     .\venv\Scripts\Activate.ps1
-     ```
-
-2. Install:
+### Running Locally
+```bash
 pip install -r requirements.txt
-
-3. Run:
 python app.py
+```
 
-4. Open: http://127.0.0.1:5000 (locally in ur system)
+## 🛡️ Security
+- Environment files (`.env`) and virtual environments (`venv`) are ignored from source control.
 
-## Deploy (Render)
-1. Push this repo to GitHub.
-2. Create a new Web Service on Render, connect your GitHub repo.
-3. Set the build command: `pip install -r requirements.txt`
-4. Set start command: `gunicorn app:app`
-5. (Optional) set environment variable `INTERNS_CSV` to `data/internships.csv` if using custom path.
-6. Deploy and open URL.
-
-## Notes
-- Update `data/internships.csv` with real listings.
-- To improve: add user auth, store feedback to train a re-ranker, integrate company logos, pagination, or filters.
-
+## Deployment
+Deployed via Railway using the included `Procfile`.
